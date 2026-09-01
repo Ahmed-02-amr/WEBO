@@ -34,4 +34,4 @@ F8C79BDE2AEAB60ABBB85EA7932CA96B8A0BDAECBC86372AFD0822509D770892  WEBO_0.2.3_x64
 
 ## Content and source availability
 
-WEBO is designed for authorized content and local device playback. Source code is intentionally not distributed from this repository; this page is the official binary download index.
+WEBO is designed for content and local device playback. Source code is intentionally not distributed from this repository; this page is the official binary download index.
