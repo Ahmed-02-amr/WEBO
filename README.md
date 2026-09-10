@@ -8,12 +8,12 @@ organized local library together in one app.
 
 ![WEBO homepage — real application screenshot](https://github.com/Ahmed-02-amr/WEBO/releases/download/v0.2.8/WEBO_homepage.png)
 
-## Download Windows v0.2.8
+## Download Windows v0.2.9
 
 | Platform    | Package                 | Download                                                                                                               |
 | ----------- | ----------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Windows x64 | Installer · 77.9 MB     | [Download setup](https://github.com/Ahmed-02-amr/WEBO/releases/download/v0.2.8/WEBO_0.2.8_x64-setup.exe)               |
-| Windows x64 | Portable ZIP · 102.4 MB | [Download portable](https://github.com/Ahmed-02-amr/WEBO/releases/download/v0.2.8/WEBO_0.2.8_windows_x64_portable.zip) |
+| Windows x64 | Installer · 77.8 MB     | [Download setup](https://github.com/Ahmed-02-amr/WEBO/releases/download/v0.2.9/WEBO_0.2.9_x64-setup.exe)               |
+| Windows x64 | Portable ZIP · 105.0 MB | [Download portable](https://github.com/Ahmed-02-amr/WEBO/releases/download/v0.2.9/WEBO_0.2.9_windows_x64_portable.zip) |
 
 **Android is temporarily unavailable.** All APK downloads have been withdrawn
 following an on-device “error communicating with nyaa.si” failure. A replacement
@@ -24,7 +24,13 @@ are verified on-device.
 
 Windows packages are unsigned and may trigger an unknown-publisher warning.
 
-## What's new
+## What's new in v0.2.9
+
+- **Quiet background media processing:** FFmpeg and ffprobe no longer open console
+  windows over the player during probing, thumbnail creation, subtitle extraction,
+  audio switching, or video conversion. Error reporting remains available.
+
+Earlier improvements retained:
 
 - **Independent local reading and playback:** opening local media no longer
   waits for the torrent service. Direct manga downloads do not need peers.
@@ -51,15 +57,21 @@ selection, and absolute episode-numbering fixes.
 
 ## Install or update on Windows
 
-Close WEBO and run the installer. For portable use, extract the whole ZIP and
+Close WEBO and install over the current version; no uninstall or data reset is
+required. For portable use, extract the whole ZIP and
 launch `WEBO.exe`; keep `WebView2Loader.dll` and the `ffmpeg` folder beside it.
 Microsoft Edge WebView2 Runtime is required.
 
 ## Testing and current limitations
 
-The v0.2.8 code passes 110 automated tests plus TypeScript, Rust formatting, and
-Clippy checks. Those checks did not establish Android provider connectivity;
-the Android builds remain withdrawn.
+The v0.2.9 release passed 112 automated tests plus TypeScript, Rust formatting,
+and Clippy checks, including Windows console-window suppression and real FFmpeg
+media processing. Package versions, bundled files, and checksums were verified.
+Clean-machine installation and interactive playback QA were not performed for
+this patch. Android builds remain withdrawn.
+
+The experimental VPN integration is **not included** in v0.2.9. This release does
+not add VPN protection or fix VPN relay connection errors.
 
 Direct manga transfers do not currently support pause/resume. Catalog metadata
 and downloads depend on third-party availability. Download speeds also depend
@@ -68,8 +80,8 @@ on your network and, for torrents, the available peers.
 ## SHA-256 checksums
 
 ```text
-4FE5F649BC9F8975EAC690C8571D8046E2D539BE2C69F6140672EBC6973BE6ED  WEBO_0.2.8_x64-setup.exe
-B064AEA236AE94D4C998A1FC861886490FA3081BCD97BEA8BDC4DF1DE33AD764  WEBO_0.2.8_windows_x64_portable.zip
+108CAE53085D86CA25787E3D26E8EB4B1D84FFF776B65B21111D6CEAA73EBAD1  WEBO_0.2.9_x64-setup.exe
+6716D51F325E8AD29DD8C181B89345FDE3B24F559270B8B2224E654643531639  WEBO_0.2.9_windows_x64_portable.zip
 ```
 
 ## About this repository
